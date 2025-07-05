@@ -1,6 +1,5 @@
 package efris;
 
-// Abstract base class
 abstract class VATProfile {
     protected String taxpayerType;
 
@@ -18,7 +17,6 @@ abstract class VATProfile {
     }
 }
 
-// Retailer subclass
 class RetailEntity extends VATProfile {
     public RetailEntity() {
         super("Retailer");
@@ -30,7 +28,6 @@ class RetailEntity extends VATProfile {
     }
 }
 
-// Wholesaler subclass
 class WholesaleEntity extends VATProfile {
     public WholesaleEntity() {
         super("Wholesaler");
@@ -42,7 +39,6 @@ class WholesaleEntity extends VATProfile {
     }
 }
 
-// Importer subclass
 class ImportEntity extends VATProfile {
     public ImportEntity() {
         super("Importer");
@@ -54,7 +50,6 @@ class ImportEntity extends VATProfile {
     }
 }
 
-// Main class demonstrating runtime polymorphism
 public class Efris {
     public static void main(String[] args) {
         VATProfile[] entities = {
